@@ -26,15 +26,17 @@ class DescargarCsv(APIView):
         } 
         for item in serializerGestion.data
     ]
+    fecha = dataGestion[0]
+    fecha = pd.to_datetime(fecha.get("Fecha_gestion")).month
+    print(fecha)
     dataPagos = [
         {
             'Cedula': itemP['Nit_cliente'],
             'Fecha_pago': itemP['Fecha_pago'],
             'Valor_pago': itemP['Valor_pago'],
-            'Mes': itemP['Mes']
         }
         for itemP in serializerPagos.data
-        if pd.to_datetime(itemP["Fecha_pago"]).month == itemP["Mes"]
+        if pd.to_datetime(itemP["Fecha_pago"]).month == fecha
     ]
     
     

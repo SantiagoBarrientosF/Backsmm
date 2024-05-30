@@ -12,13 +12,12 @@ class CargarArchivoCvsView(APIView):
      
      def post(self, request, *args, **kwargs):
         archivo_cvs = request.FILES.get('file')
-        mes = request.data.get("mes")
         Pagos.objects.all().delete()
         
         if not archivo_cvs:
             return Response({"error": "No se ha proporcionado ningún archivo"}, status=status.HTTP_400_BAD_REQUEST)
     
-        handle_file_Pagos(archivo_cvs, mes)
+        handle_file_Pagos(archivo_cvs)
         return Response({"status": "success"}, status=status.HTTP_201_CREATED)
        
 

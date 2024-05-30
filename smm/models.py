@@ -25,7 +25,7 @@ class Pagos(models.Model):
     Valor_pago = models.CharField(max_length=200)
     Aplicacion_final = models.CharField(max_length=200)
     Fecha_sencilla = models.DateTimeField()
-    Mes = models.IntegerField()
+   
     
     
 # class CruceRegistro(models.Model):

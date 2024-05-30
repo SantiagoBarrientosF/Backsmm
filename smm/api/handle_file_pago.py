@@ -3,7 +3,7 @@ from smm.api.serializer import PagosSerializer
 from smm.models import Pagos
 
 
-def handle_file_Pagos(file, mes):
+def handle_file_Pagos(file):
     chunk_size = 5000
     
    
@@ -34,7 +34,6 @@ def handle_file_Pagos(file, mes):
                     'Valor_pago' :row[' valorpago '],
                     'Aplicacion_final' : row['APLICACIÓN FINAL'],
                     'Fecha_sencilla' : row['FECHA SENCILLA'],
-                    "Mes" : mes
                     
                 }
                 
