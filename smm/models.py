@@ -25,5 +25,15 @@ class Pagos(models.Model):
     Valor_pago = models.CharField(max_length=200)
     Aplicacion_final = models.CharField(max_length=200)
     Fecha_sencilla = models.DateTimeField()
-   
+    Mes = models.IntegerField()
+    
+    
+# class CruceRegistro(models.Model):
+#     Cedula_cliente = models.CharField(max_length=200)
+#     Cod_gestion = models.CharField(max_length=200)
+#     Nombre_asesor = models.CharField(max_length=200)
+#     Fecha_gestion = models.DateTimeField(null=True)
+#     Valor_pago = models.CharField(max_length=200)
+#     Fecha_pago = models.DateTimeField(null=True)
+
     

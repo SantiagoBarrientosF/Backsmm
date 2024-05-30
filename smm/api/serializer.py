@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from smm.models import Gestion
-from smm.models import Pagos
+from smm.models import Gestion, Pagos
 
 class GestionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,4 +9,6 @@ class GestionSerializer(serializers.ModelSerializer):
 class PagosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pagos
-        fields = '__all__'        
+        fields = '__all__'      
+        
+   
