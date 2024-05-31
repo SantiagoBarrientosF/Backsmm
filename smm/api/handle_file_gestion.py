@@ -6,7 +6,7 @@ def handle_file(file):
     chunk_size = 5000
     registros = []
     compared_id_gestion = set()
-    resultados_invalidos = {"No contestan", "Mensaje con terceros", "Nro. inhabilitado", "Conmutador", "Equivocado", "Fallecido", "Ocupado"}
+    resultados_invalidos = {"No contestan", "Mensaje con terceros", "Nro. inhabilitado", "Conmutador", "Equivocado", "Fallecido", "Ocupado", "Caso Especial", "Entrega Comunicado", "No Localizado", "Nuevos Datos"}
     
    
     
