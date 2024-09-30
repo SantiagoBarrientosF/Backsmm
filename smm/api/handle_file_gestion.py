@@ -6,9 +6,7 @@ def handle_file(file):
     chunk_size = 5000
     registros = []
     compared_id_gestion = set()
-    resultados_invalidos = {"No contestan", "Mensaje con terceros", "Nro. inhabilitado", "Conmutador", "Equivocado", "Fallecido", "Ocupado", "Caso Especial", "Entrega Comunicado", "No Localizado", "Nuevos Datos"}
-    
-   
+    resultados_invalidos = {"No contestan", "Nro. inhabilitado", "Equivocado", "Fallecido", "Ocupado", "No Localizado"}
     
     for chunk in pd.read_csv(file, chunksize=chunk_size, sep=';'):
         batch = []
