@@ -31,7 +31,7 @@ def handle_file_Pagos(file):
                     'Cod_cliente' : row['codcliente'],
                     'Numero_obligacion' : row['numobligacion'],
                     'Fecha_pago' : row['fechapago'],
-                    'Valor_pago' :row[' valorpago '],
+                    'Valor_pago' :row['valorpago'],
                     'Aplicacion_final' : row['APLICACIÓN FINAL'],
                     'Fecha_sencilla' : row['FECHA SENCILLA'],
                     
