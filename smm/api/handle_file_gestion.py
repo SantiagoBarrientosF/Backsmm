@@ -6,6 +6,7 @@ def handle_file(file):
     chunk_size = 5000
     registros = []
     compared_id_gestion = set()
+    compared_id_obligacion = set()
     resultados_invalidos = {"No contestan", "Nro. inhabilitado", "Equivocado", "Fallecido", "Ocupado", "No Localizado"}
     
     for chunk in pd.read_csv(file, chunksize=chunk_size, sep=';'):
@@ -22,6 +23,10 @@ def handle_file(file):
                 if row["Código gestión"] in compared_id_gestion:
                     continue
                 compared_id_gestion.add(row["Código gestión"])
+
+                if row["Obligación"] in compared_id_obligacion:
+                    continue
+                compared_id_obligacion.add(row["Obligación"])
                 
                 registro_data = {
                     'Id_gestion_campaña': row['Id Gestion Campaña'],
